@@ -219,10 +219,10 @@ const init = () => {
 const timeoutobserver = new MutationObserver((mutationsList, observer) => {
   const table = document.querySelector(`table.linkDescList`);
   const timeout = document.querySelector(`#sessiontimeoutwarning`);
-  if (getComputedStyles(timeout).visibility === "visible")
-    table.style.top = getComputedStyles(timeout).height;
+  if (getComputedStyle(timeout).visibility === "visible")
+    table.style.top = getComputedStyle(timeout).height;
   else
-    table.style.top = 0;
+    table.style.top = null;
 });
 
 timeoutobserver.observe(document.querySelector(`#sessiontimeoutwarning`), {
